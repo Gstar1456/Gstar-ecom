@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: backend
+  - type: static
+    name: frontend
+    buildCommand: npm install && npm run build
+    publishPath: frontend/dist
